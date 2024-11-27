@@ -160,25 +160,25 @@ class _PerfilPersonalState extends State<PerfilPersonal> {
                     child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start, // Alineación a la izquierda
+                    crossAxisAlignment: CrossAxisAlignment.start, 
                     children: [
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start, // Alineación a la izquierda
+                        crossAxisAlignment: CrossAxisAlignment.start, 
                         children: [
                           ...lenguajesList.entries.map((entry) {
                             double progreso = obtenerProgreso(entry.key);
                             return Container(
-                              margin: const EdgeInsets.symmetric(vertical: 8.0), // Espaciado entre lenguajes
+                              margin: const EdgeInsets.symmetric(vertical: 8.0), 
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start, // Alineación a la izquierda
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    entry.value, // Nombre del lenguaje
+                                    entry.value, 
                                     style: const TextStyle(fontSize: 14),
                                   ),
                                   const SizedBox(height: 8),
                                   LinearProgressIndicator(
-                                    value: progreso, // Valor de progreso
+                                    value: progreso, 
                                     backgroundColor: Colors.grey[300],
                                     valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
                                   ),
@@ -193,30 +193,29 @@ class _PerfilPersonalState extends State<PerfilPersonal> {
                 ),
               ),
               Card(
-                   elevation: 5, // Elevación para crear un efecto de sombra
+                   elevation: 5, 
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15), // Bordes redondeados
+                    borderRadius: BorderRadius.circular(15), 
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center, // Centrado vertical
-                      crossAxisAlignment: CrossAxisAlignment.start, // Alineación a la izquierda
+                      mainAxisAlignment: MainAxisAlignment.center, 
+                      crossAxisAlignment: CrossAxisAlignment.start, 
                       children: [
                         ...idiomasList.entries.map((entry) {
-                          // Convertir el porcentaje a un valor numérico para el indicador de progreso
                           double progreso = double.parse(entry.value.replaceAll('%', '')) / 100;
 
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                entry.key, // Nombre del idioma (alineado a la izquierda)
+                                entry.key, 
                                 style: const TextStyle(fontSize: 16),
                               ),
                               const SizedBox(height: 4),
                               LinearProgressIndicator(
-                                value: progreso, // Usar el valor de progreso calculado
+                                value: progreso, 
                                 backgroundColor: Colors.grey[300],
                                 valueColor: const AlwaysStoppedAnimation<Color>(
                                     Colors.blue),
@@ -242,7 +241,6 @@ class _PerfilPersonalState extends State<PerfilPersonal> {
   }
 }
 
- // Función para crear las filas de datos personales
   Widget buildRow(IconData icon, String data) {
     return Row(
       children: [
@@ -295,15 +293,15 @@ double obtenerProgreso(String id) {
 double idiomaList(String id) {
   switch (id) {
     case "Reading":
-      return 0.9; // 90% habilidad
+      return 0.9; 
     case "Speaking":
-      return 0.8; // 80% habilidad
+      return 0.8; 
     case "Listening":
-      return 0.7; // 70% habilidad
+      return 0.7; 
     case "Writing":
-      return 0.6; // 60% habilidad
+      return 0.6; 
     default:
-      return 0.5; // Por defecto al 50%
+      return 0.5; 
   }
 }
 

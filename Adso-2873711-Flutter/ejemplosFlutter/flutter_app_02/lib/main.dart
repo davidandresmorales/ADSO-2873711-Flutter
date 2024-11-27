@@ -11,7 +11,7 @@ class Principal extends StatelessWidget {// Se crea una clase que hereda de stat
     //Se retorna un widget, en nuestro caso MaterialApp
     return const MaterialApp(
       title: 'Mi Primera App - ADSO2873711',
-      home: Text("Primera aplicacion en flutter\nYerson Herrera\nADSO 2873711 \nCPIC - SENA"),
+      home: Text("Primera aplicacion en flutter\nDavid Morales\nADSO 2873711 \nCPIC - SENA"),
     );
   }
 }

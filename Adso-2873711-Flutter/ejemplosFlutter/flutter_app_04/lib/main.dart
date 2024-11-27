@@ -20,7 +20,7 @@ class Principal extends StatelessWidget {
         body: Column(
           children: [
             ListTile(
-              title:Text('Yerson Herrera'),
+              title:Text('David Morales'),
               subtitle: Text('Nombre'),
               leading: Icon(Icons.person),
             )

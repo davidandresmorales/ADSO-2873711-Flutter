@@ -22,7 +22,7 @@ class CurriculumVitaeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Curriculum Vitae V1'),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
       ),
       body: Column(
         children: [
@@ -72,7 +72,7 @@ class CurriculumVitaeScreen extends StatelessWidget {
     return Card(
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: ListTile(
-        leading: Icon(icon, color: Colors.green),
+        leading: Icon(icon, color: Colors.blue),
         title: Text(title),
         trailing: Icon(Icons.arrow_forward_ios, color: Colors.grey),
         onTap: () {
